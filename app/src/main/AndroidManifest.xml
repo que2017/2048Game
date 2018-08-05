@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+package 包表示整个Java 应用程序的主要包名，而且是一个默认的程序名称
+android:installLocation auto自动寻找安装位置，internalOnly只能按装在ROM中，preferExternal直接按装在SDCard中
+-->
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.game2048.zhang.a2048game"
+    android:installLocation="auto">
+
+    <!--<uses-sdk-->
+        <!--添加用户的授权-->
+        <!--android:minSdkVersion="14"-->
+        <!--android:targetSdkVersion="14"/>-->
+    <!--
+    android:icon 应用程序的logo
+    android:label 应用程序的简要说明
+    application中添加的name是全局的
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--
+        android:name=".MainActivity" 整个应用程序的主程序名称
+        intent-filter 意图过滤器：用来过滤用户的一些动作和操作
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <!--
+                action android:name="android.intent.action.MAIN" 表示当前程序是整个应用程序的入口程序
+                -->
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--
+                category android:name="android.intent.category.LAUNCHER" 表示应用程序是否在程序列表中显示
+                -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
