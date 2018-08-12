@@ -136,11 +136,13 @@ public class GameView extends GridLayout {
                 if(cardsMap[x][y].getNum() <= 0){
                     emptyPoint.add(new Point(x,y));
                 }
+                cardsMap[x][y].setBackgroundColor();
             }
         }
 
         Point p = emptyPoint.remove((int)(Math.random() * emptyPoint.size()));
         cardsMap[p.x][p.y].setNum(Math.random() <= 0.1 ? 4 : 2);
+        cardsMap[p.x][p.y].setBackgroundColor();
     }
 
     private boolean checkWin(){
