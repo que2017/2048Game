@@ -1,6 +1,7 @@
 package com.game2048.zhang.a2048game;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.view.Gravity;
 import android.widget.FrameLayout;
@@ -14,9 +15,10 @@ public class Card extends FrameLayout {
         super(context);
 
         label = new TextView(getContext());
-        label.setTextSize(32);
+        label.setTextSize(45);
+        label.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         label.setGravity(Gravity.CENTER);
-        label.setBackgroundColor(0x33ffffff);
+        label.setBackgroundResource(R.drawable.text_view_border);
         LayoutParams lp = new LayoutParams(-1,-1);
         lp.setMargins(10, 10, 0,0);
         addView(label, lp);

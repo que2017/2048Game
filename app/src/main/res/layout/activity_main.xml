@@ -11,15 +11,21 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:text="@string/score"/>
         <TextView
             android:id="@+id/tvScore"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#f60"
+            android:textSize="30dp"/>
     </LinearLayout>
     <com.game2048.zhang.a2048game.GameView
         android:layout_width="fill_parent"
