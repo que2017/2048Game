@@ -57,9 +57,11 @@ public class Card extends FrameLayout {
                 label.setBackgroundResource(R.drawable.text_view_border512);
                 break;
             case 1024:
+                label.setTextSize(32);
                 label.setBackgroundResource(R.drawable.text_view_border1024);
                 break;
             case 2048:
+                label.setTextSize(32);
                 label.setBackgroundResource(R.drawable.text_view_border2048);
                 break;
             default:
